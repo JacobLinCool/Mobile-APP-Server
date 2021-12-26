@@ -61,6 +61,13 @@ function validate_data(game) {
                 }
             }
         }
+
+        for (const team of game.teams) {
+            if (team.length === 0 || team.length > 30) {
+                return false;
+            }
+        }
+
         return true;
     } catch (err) {
         console.log(err);
