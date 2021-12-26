@@ -1,0 +1,24 @@
+{
+    "name": "mobile-app-server",
+    "version": "0.1.0",
+    "description": "Mobile APP Server",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server"
+    },
+    "keywords": [],
+    "author": "JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)",
+    "license": "MIT",
+    "dependencies": {
+        "@replit/database": "^2.0.1",
+        "koa": "^2.13.4",
+        "koa-body": "^4.2.0",
+        "koa-mount": "^4.0.0",
+        "koa-response-time": "^2.1.0",
+        "koa-router": "^10.1.1",
+        "koa-static": "^5.0.0"
+    },
+    "devDependencies": {
+        "vite": "^2.7.2"
+    }
+}
