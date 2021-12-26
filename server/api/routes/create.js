@@ -62,10 +62,15 @@ function validate_data(game) {
             }
         }
 
+        const team_names = new Set();
         for (const team of game.teams) {
             if (team.length === 0 || team.length > 30) {
                 return false;
             }
+            if (team_names.has(team)) {
+                return false;
+            }
+            team_names.add(team);
         }
 
         return true;
