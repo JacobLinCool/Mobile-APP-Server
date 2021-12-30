@@ -1,16 +1,48 @@
-# Mobile APP Server
- Mobile APP Server
+# API Endpoints
 
-## API Endpoints
+Mobile APP Server
 
-### POST /api/create
+## 遊戲
 
-return `{ "id": "abc123" }`
+### 讀取所有遊戲資訊
 
-### GET /api/get?id=`id`
+```
+GET https://Mobile-APP-Server.jacoblincool.repl.co/all
+```
 
-return `Challenge`
+### 讀取指定遊戲資訊
 
-### GET /api/all
+```
+GET https://Mobile-APP-Server.jacoblincool.repl.co/get?id={id}
+```
 
-return `{ id: Challenge }`
+## 排名
+
+### 讀取所有遊戲排名
+
+```
+GET https://Mobile-APP-Server.jacoblincool.repl.co/ranking/all
+```
+
+### 讀取指定遊戲排名
+
+```
+GET https://Mobile-APP-Server.jacoblincool.repl.co/ranking/get?id={id}
+```
+
+### 新增遊戲排名
+
+```
+POST https://Mobile-APP-Server.jacoblincool.repl.co/ranking/add
+```
+
+Body (JSON):
+
+```json
+{
+    "id": "game_id",
+    "team": "team name",
+    "name": "player name",
+    "time": 12345678
+}
+```
