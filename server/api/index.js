@@ -7,6 +7,7 @@ const api_router = new Router();
 api_router.post("/create", require("./routes/create"));
 api_router.get("/get", require("./routes/get"));
 api_router.get("/all", require("./routes/all"));
+api_router.get("/list", require("./routes/list"));
 api_router.options("/create", async (ctx) => {
     ctx.status = 200;
 });
