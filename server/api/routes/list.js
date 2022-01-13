@@ -6,5 +6,5 @@ module.exports = async function (ctx) {
             id: game.id,
             name: game.name,
             description: game.description,
-        })) || {};
+        })) || [];
 };
