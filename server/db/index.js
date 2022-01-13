@@ -14,7 +14,10 @@ async function create_game(id, challenge) {
 
 async function get_all_games() {
     const list = await client.list(game_prefix);
-    const games = list.map((id) => ({ id, ...client.get(id) }));
+    const games = list.map(async (key) => {
+        const game = await client.get(key);
+        return { id: key.replace(game_prefix, ""), ...game };
+    });
     return await Promise.all(games);
 }
 
