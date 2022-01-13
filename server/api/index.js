@@ -15,6 +15,9 @@ api_router.options("/create", async (ctx) => {
 api_router.get("/ranking/get", require("./routes/ranking/get"));
 api_router.get("/ranking/all", require("./routes/ranking/all"));
 api_router.post("/ranking/add", require("./routes/ranking/add"));
+api_router.options("/ranking/add", async (ctx) => {
+    ctx.status = 200;
+});
 
 const app = new Koa();
 app.use(async (ctx, next) => {
