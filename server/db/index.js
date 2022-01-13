@@ -26,6 +26,10 @@ async function get_ranking(id) {
 
     data.sort((a, b) => a.time - b.time);
 
+    for (let i = 0; i < data.length; i++) {
+        data[i].time = parseFloat(data[i].time.toFixed(2));
+    }
+
     return data;
 }
 
@@ -49,6 +53,10 @@ async function get_team_ranking(id) {
     }
 
     team_ranking.sort((a, b) => a.time - b.time);
+
+    for (let i = 0; i < team_ranking.length; i++) {
+        team_ranking[i].time = parseFloat(team_ranking[i].time.toFixed(2));
+    }
 
     return team_ranking;
 }
